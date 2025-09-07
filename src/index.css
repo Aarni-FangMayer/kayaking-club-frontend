@@ -1,68 +1,200 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url(./assets/fonts/Inter_18pt-SemiBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Sree Krushnadevaraya', serif;
+  src: url(./assets/fonts/SreeKrushnadevaraya-Regular.woff2);
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+@font-face {
+  font-family: 'Tapestry';
+  src: url(./assets/fonts/Tapestry-Regular.woff2);
+  font-weight: 400;
 }
-a:hover {
-  color: #535bf2;
+
+:root {
+  --text-light: #D6E5ED;
+  --green: #57869A;
+  --dark: #1E2B43;
+  --grey-blue: #AAC3D0;
+  --smoked-blue: #7FA2B4;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl
+):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Remove the default bullet from a list with a class attribute
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Reset vertical margins of the paragraph,
+  declare a local variable for the bottom margin
+  to avoid interference with a more complex selector
+ */
+p {
+  --paragraphMarginBottom: 24px;
+
+  margin-block: 0;
+}
+
+/**
+  Bottom margin for paragraphs without a class attribute 
+  that are not the last among their sibling elements
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Inherit font properties for input fields
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  height: 100%;
+  /**
+    Prevent horizontal layout shift when the scrollbar appears/disappears
+   */
+  scrollbar-gutter: stable;
+}
+
+/**
+  Smooth scroll
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  min-height: 100%;
+  /**
+    Unified line height
+   */
+  line-height: 1.5;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/**
+  Normalize the height of a link element when inspecting it in DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/**
+  Cursor changes to a pointer when hovering over the element
+ */
+button,
+label {
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+/**
+  Normalize the color of SVG elements
+  (except those that already have a 'fill' attribute set to 'none' or starting with 'url')
+ */
+:where([fill]:not(
+  [fill="none"],
+  [fill^="url"]
+)) {
+  fill: currentColor;
+}
+
+/**
+  Normalize the color of SVG elements
+  (except those that already have a 'stroke' attribute set to 'none')
+ */
+:where([stroke]:not([stroke="none"])) {
+  stroke: currentColor;
+}
+
+/**
+  Fix the color change delay bug when interacting with SVG elements
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Set table borders to the classic 'collapse' style
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Remove all animations and transitions for users
+  who prefer not to use them
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
