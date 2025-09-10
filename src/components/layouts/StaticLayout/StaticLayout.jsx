@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-import Header from "../../headers/Header/Header";
-import MobileHeader from "../../headers/mobileHeader/MobileHeader";
-import BurgerMenu from "../../headers/burgerMenu/BurgerMenu";
+import Header from "../../navigation/header/Header";
+import MobileHeader from "../../navigation/mobileHeader/MobileHeader";
+import BurgerMenu from "../../navigation/burgerMenu/BurgerMenu";
+import Sidebar from "../../navigation/sidebar/Sidebar";
 import "./staticLayout.css";
 
 const StaticLayout = ({ children }) => {
@@ -14,8 +15,10 @@ const StaticLayout = ({ children }) => {
       <Header setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
       <MobileHeader setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
       <BurgerMenu setMenuOpen={setMenuOpen} menuOpen={menuOpen} language={language} setLanguage={setLanguage} />
-      <div className="layout__sidebar">tis is sidebar</div>
-      <div className="layout__content">{children}</div>
+      <div className="layout__main">
+        <Sidebar />
+        <div className="layout__content">{ children }</div>
+      </div>
     </div>
   );
 };

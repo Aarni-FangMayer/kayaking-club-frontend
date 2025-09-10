@@ -11,6 +11,9 @@ const Header = ( {setMenuOpen, menuOpen })  => {
       <nav className="header__nav">
         <ul className="nav__list">
           <li>
+            <a href="/">about</a>
+          </li>
+          <li>
             <a href="/tours">routes & prices</a>
           </li>
           <li>
@@ -18,17 +21,12 @@ const Header = ( {setMenuOpen, menuOpen })  => {
           </li>
         </ul>
       </nav>
-      <div className="header_info">
-        <div className="header__info-phonenumber">
-          <a href="tel:+16548964712">+1 (654) 896-4712</a>
-        </div>
-        <div
-          className="header__info-burgermenu"
+              <div
+          className="header__burgermenu"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <img src="/hamburger_menu.png" alt="Menu" />
         </div>
-      </div>
     </div>
   );
 };

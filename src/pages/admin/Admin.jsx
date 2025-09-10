@@ -1,5 +1,5 @@
 import React from 'react'
-import StaticLayout from '../../components/layouts/StaticLayout/StaticLayout'
+import StaticLayout from '../../components/layouts/staticLayout/StaticLayout'
 
 const Admin = () => {
   return (

@@ -12,10 +12,13 @@
 
 @media (max-width: 840px) {
     .layout__mobileHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        grid-column: 2/12;
+        padding-top: 45px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 20px;
+    }
+    .header__logo {
+        grid-column: 2/6;
     }
     .header__logo a {
         color: var(--text-light);
@@ -24,7 +27,9 @@
         line-height: 0.7;
     }
     .header__info-burgermenu {
+        grid-column: 11/12;
         align-self: end;
+        justify-self: end;
     }
     .header__info-burgermenu img {
         height: 30px;
