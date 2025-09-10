@@ -1,0 +1,122 @@
+.layout__sidebar {
+    grid-column: 2/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    height: 100%;
+    padding-bottom: 60px;
+    font-family: 'Sree Krushnadevaraya', serif;
+    font-weight: 400;
+    position: relative;
+}
+
+.layout__sidebar-nav {
+    display: flex;
+    gap: 12px;
+    margin-top: 50%;
+}
+
+.layout__sidebar-nav__line {
+    margin: 10px 0;
+    height: 195px;
+    width: 1px;
+    background-color: rgba(214, 229, 237, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.layout__sidebar-nav__dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin-left: -1px;
+    background-color: var(--green);
+}
+.layout__sidebar-nav__dot--active {
+    background-color: var(--text-light);
+}
+
+.layout__sidebar-nav__slide-numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    color: rgba(214, 229, 237, 0.2);
+    font-size: 16px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.layout__sidebar-nav__number--active {
+    border: solid 1px rgba(87, 134, 154, 0.2);
+    color: var(--text-light);
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -7px;
+    position: relative;
+}
+
+.layout__sidebar-nav__number:hover{
+    color: var(--grey-blue);
+}
+
+.layout__sidebar-nav__number--active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 1px;
+  background-color: rgba(87, 134, 154, 0.2);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.layout__sidebar-to-top {
+    transform: rotate(270deg);
+    transform-origin: left top;
+    color: rgba(214, 229, 237, 0.5);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: -10px;
+}
+
+.layout__sidebar-to-top:hover {
+    color: var(--grey-blue);
+}
+
+.layout__sidebar-to-top img {
+    transform: rotate(180deg);
+    margin-top: 2px;
+}
+
+@media (max-width: 1280px) {
+    .layout__sidebar-nav__line {
+        height: 165px;
+    }
+    .layout__sidebar-nav__slide-numbers {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 840px) {
+    .layout__sidebar {
+        display: none;
+    }
+}
