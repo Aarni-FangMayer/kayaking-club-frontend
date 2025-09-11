@@ -27,13 +27,11 @@
 
 @media (max-width: 1024px) {
     .layout {
-        column-gap: 15px;
-    }
-}
-
-@media (max-width: 840px) {
-    .layout {
         background-image: url('../../../assets/images/bg_img_mobile.jpg');
+        height: 650px;
+    }
+    .layout__main {
+        grid-column: 2/12;
     }
     .layout__sidebar {
         display: none;
@@ -50,8 +48,19 @@
     }
 }
 
+@media (max-width: 840px) {
+    
+}
+
+@media (max-width: 580px) {
+    .layout {
+        height: 565px;
+    }
+}
+
 @media (max-width: 430px) {
     .layout {
         column-gap: 20px;
+        height: 550px;
     }
 }

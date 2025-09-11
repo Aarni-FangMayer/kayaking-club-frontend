@@ -98,7 +98,7 @@
 }
 
 .layout__sidebar-to-top:hover {
-    color: var(--grey-blue);
+    font-size: 17px;
 }
 
 .layout__sidebar-to-top img {

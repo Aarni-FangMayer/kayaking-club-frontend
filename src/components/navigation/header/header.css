@@ -72,6 +72,9 @@
 }
 
 @media (max-width: 1024px) {
+    .layout__header {
+        margin-bottom: 0;
+    }
     .layout__header a {
         font-size: 14px;
     }

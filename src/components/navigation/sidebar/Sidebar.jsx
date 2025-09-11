@@ -19,7 +19,7 @@ const Sidebar = () => {
         </div>
       </div>
       <button className="layout__sidebar-to-top">
-        <img src="/public/arrow_btn.png" alt="" />
+        <img src="/arrow_btn.png" alt="" />
         contacts
       </button>
     </div>

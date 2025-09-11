@@ -27,7 +27,7 @@
         line-height: 0.7;
     }
     .header__info-burgermenu {
-        grid-column: 11/12;
+        grid-column: 10/12;
         align-self: end;
         justify-self: end;
     }
