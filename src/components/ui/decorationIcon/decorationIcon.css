@@ -1,0 +1,24 @@
+.decoration-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.decoration-icon__text {
+    width: 160px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+@media (max-width: 1280px) {
+    .decoration-icon__icon {
+        width: 65px;
+        height: 65px;
+    }
+    .decoration-icon__text {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+}
