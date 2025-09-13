@@ -1,0 +1,128 @@
+.about {
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    /* display: grid;
+    grid-template-columns: repeat(18, 1fr); */
+    /* column-gap: 20px; */
+}
+
+.about__content {
+    grid-column: 1/19;
+    width: 100%;
+    height: 100%;
+    color: var(--text-light);
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 0 20px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 65px; */
+}
+
+.about__body {
+    grid-column: 1/19;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.about__text {
+    grid-column: 1/7;
+    /* width: 32%; */
+}
+
+.about__subtitle {
+    margin: 25px 0;
+}
+
+.about__description {
+    margin-bottom: 25px;
+}
+
+.about__image {
+    grid-column: 8/19;
+    padding-top: 27px;
+}
+
+.about__image img {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.about__decor {
+    grid-column: 1/19;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1280px) {
+    .about__text {
+        
+    }
+    .about__subtitle {
+        margin: 15px 0;
+    }
+    .about__description {
+        margin-bottom: 15px;
+    }
+    .about__image {
+        
+    }
+    .about__decor {
+        gap: 55px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        margin-top: 100px;
+    }
+    .about__content {
+        height: auto;
+    }
+    .about__body {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .about__text {
+        grid-column: 2/7;
+        height: auto;
+    }
+    .about__image {
+        grid-column: 8/13;
+        padding-top: 20px;
+        height: 250px;
+    }
+    .about__image img {
+        height: 100%;
+    }
+    .about__decor {
+        column-gap: 40px;
+        grid-column: 2/18;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 840px) {
+    .about__text {
+        grid-column: 2/12;
+    }
+    .about__image {
+        grid-column: 1/13;
+        padding-top: 0;
+        margin: 70px 0;
+        height: 330px;
+    }
+    .about__decor {
+        column-gap: 0;
+        display: flex;
+        justify-content: center;
+        margin: 0 50px;
+    }
+}
