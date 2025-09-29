@@ -1,0 +1,68 @@
+.slider-big {
+    margin-bottom: 150px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    column-gap: 20px;
+}
+
+.slider-big__title {
+    grid-column: 1/10;
+    margin-bottom: 25px;
+}
+
+.slider-big__carousel {
+    grid-column: 1/19;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: 3fr 1fr;
+    column-gap: 20px
+}
+
+.slider-big__controls {
+    grid-column: 7/19;
+    grid-row: 2/3;
+    display: flex;
+    column-gap: 20px;
+    align-items: end;
+}
+
+.slider-big__button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Sree Krushnadevaraya', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--green);
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.slider-big__button:hover {
+    color: var(--grey-blue);
+}
+
+@media (max-width: 1400px) {
+    .slider-big {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+    .slider-big {
+        display: none;
+    }
+}
+
+@media (max-width: 840px) {
+}
+
+@media (max-width: 580px) {
+}
+
+@media (max-width: 430px) {
+}
