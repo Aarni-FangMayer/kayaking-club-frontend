@@ -10,7 +10,7 @@ import Icon4 from '../../../assets/icons/icon_4.png'
 
 const AboutSectionHome = () => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about__content">
         <div className="about__body">
           <div className="about__text">

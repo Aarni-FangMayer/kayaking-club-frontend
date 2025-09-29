@@ -1,5 +1,5 @@
-import React from 'react'
-import './sidebar.css'
+import React from "react";
+import "./sidebar.css";
 
 const Sidebar = () => {
   return (
@@ -12,18 +12,63 @@ const Sidebar = () => {
           <div className="layout__sidebar-nav__dot" />
         </div>
         <div className="layout__sidebar-nav__slide-numbers">
-          <div className="layout__sidebar-nav__number layout__sidebar-nav__number--active">1</div>
-          <div className="layout__sidebar-nav__number">2</div>
-          <div className="layout__sidebar-nav__number">3</div>
-          <div className="layout__sidebar-nav__number">4</div>
+          <div
+            onClick={() =>
+              document
+                .getElementById("main")
+                .scrollIntoView({ behavior: "smooth", block: "start" })
+            }
+            className="layout__sidebar-nav__number layout__sidebar-nav__number--active"
+          >
+            1
+          </div>
+          <div
+            onClick={() =>
+              document
+                .getElementById("about")
+                .scrollIntoView({ behavior: "smooth", block: "start" })
+            }
+            className="layout__sidebar-nav__number"
+          >
+            2
+          </div>
+          <div
+            onClick={() =>
+              document
+                .getElementById("routes")
+                .scrollIntoView({ behavior: "smooth", block: "start" })
+            }
+            className="layout__sidebar-nav__number"
+          >
+            3
+          </div>
+          <div
+            onClick={() =>
+              document.getElementById("contacts").scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })
+            }
+            className="layout__sidebar-nav__number"
+          >
+            4
+          </div>
         </div>
       </div>
-      <button className="layout__sidebar-to-top">
+      <button
+        onClick={() =>
+          document.getElementById("contacts").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          })
+        }
+        className="layout__sidebar-to-top"
+      >
         <img src="/arrow_btn.png" alt="" />
         contacts
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

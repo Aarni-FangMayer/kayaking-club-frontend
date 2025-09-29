@@ -5,7 +5,7 @@ import './mainSectionHome.css'
 
 const MainSectionHome = () => {
   return (
-    <section className="home-main">
+    <section id="main" className="home-main">
       <div className="home-content">
         <div className="home-content__image">
           <SliderSmall />
