@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowBlueButton from "../../../components/buttons/arrow_blue/ArrowBlueButton";
+import TextBlock from "../../../components/shared/TextBlock";
 import Decorationicon from "../../../components/ui/decorationIcon/DecorationIcon";
 
 import "./customRouteSection.css";
@@ -13,22 +13,14 @@ const CustomRouteSection = () => {
   return (
     <section className="custom-routes">
       <div className="custom-routes__intro">
-        <div className="custom-routes__content">
-          <div className="custom-routes__text-content">
-            <h2 className="custom-routes__title">Custom Rotes</h2>
-            <h3 className="custom-routes__subtitle">
-              Experiences for every occasion
-            </h3>
-            <p className="custom-routes__text">
-              Whether it’s a team-building day, a birthday celebration, or a
-              special getaway, our personalized tours let you design every
-              detail. Choose your pace, style, and activities to create an
-              unforgettable experience that perfectly matches your group’s needs
-              and interests.
-            </p>
-          </div>
-          <ArrowBlueButton text={"Contact us"} />
-        </div>
+        <TextBlock
+          title={"Custom Rotes"}
+          subtitle={"Experiences for every occasion"}
+          description={
+            "Whether it’s a team-building day, a birthday celebration, or a special getaway, our personalized tours let you design every detail. Choose your pace, style, and activities to create an unforgettable experience that perfectly matches your group’s needs and interests."
+          }
+          btnText={"Contact us"}
+        />
         <div className="custom-routes__image">
           <img src={KayakerImage2} alt="" />
         </div>
