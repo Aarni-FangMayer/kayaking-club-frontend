@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import Card from "../../cards/card/Card";
 import SliderButtons from "../../buttons/slider_buttons/SliderButtons";
 
@@ -9,8 +9,9 @@ import NatureImage3 from "../../../assets/images/nature_img3.jpg";
 import NatureImage4 from "../../../assets/images/nature_img4.jpg";
 
 const SliderBig = () => {
-  const cards = [
+  const initialCards = [
     {
+      id: 1,
       subtitle: "difficulty: easy",
       title: "Bow River Serenity",
       description:
@@ -19,6 +20,7 @@ const SliderBig = () => {
       image: NatureImage1,
     },
     {
+      id: 2,
       subtitle: "difficulty: middle",
       title: "Lake Louise Paddle",
       description:
@@ -27,6 +29,7 @@ const SliderBig = () => {
       image: NatureImage2,
     },
     {
+      id: 3,
       subtitle: "difficulty: easy",
       title: "Algonquin Explorer",
       description:
@@ -35,6 +38,7 @@ const SliderBig = () => {
       image: NatureImage3,
     },
     {
+      id: 4,
       subtitle: "difficulty: hard",
       title: "Yukon Wilderness",
       description:
@@ -43,15 +47,46 @@ const SliderBig = () => {
       image: NatureImage4,
     },
   ];
+
+  const [cards, setCards] = useState(initialCards);
+
+  const handleNext = () => {
+    setCards((prev) => {
+      const newCards = [...prev];
+      const first = newCards.shift();
+      newCards.push(first);
+      return newCards;
+    });
+  };
+
+  const handlePrev = () => {
+    setCards((prev) => {
+      const newCards = [...prev];
+      const last = newCards.pop();
+      newCards.unshift(last);
+      return newCards;
+    });
+  };
+
   return (
     <div className="slider-big">
       <h2 className="slider-big__title">Popular Routes</h2>
       <div className="slider-big__carousel">
         {cards.map((card, index) => {
-          return <Card key={index} isActive={index === 0} {...card} />;
+          return (
+            <Card
+              key={card.id + "-" + index}
+              subtitle={card.subtitle}
+              title={card.title}
+              description={card.description}
+              price={card.price}
+              image={card.image}
+              isActive={index === 0}
+            />
+          );
         })}
         <div className="slider-big__controls">
-          <SliderButtons />
+          <SliderButtons nextSlide={handleNext} prevSlide={handlePrev} />
           <button className="slider-big__button">Show all directions</button>
         </div>
       </div>
