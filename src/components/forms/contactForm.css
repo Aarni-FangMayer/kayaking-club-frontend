@@ -6,6 +6,10 @@
     align-items: flex-start;
 }
 
+.contacts__form-title {
+    margin-bottom: 30px;
+}
+
 .contacts__form-field {
     width: 100%;
     background-color: transparent;

@@ -30,17 +30,6 @@
     margin-bottom: 30px;
 }
 
-.contacts__item {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-    margin-bottom: 15px;
-}
-
-.contacts__form-title {
-    margin-bottom: 30px;
-}
-
 .contacts__map {
     grid-column: 10/19;
     border-bottom-left-radius: 3px;
@@ -65,9 +54,6 @@
     }
     .contacts__subtitle {
         margin-bottom: 15px;
-    }
-    .contacts__item {
-        column-gap: 30px;
     }
     .contacts__map {
         grid-column: 10/18;

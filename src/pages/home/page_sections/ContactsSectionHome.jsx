@@ -1,4 +1,5 @@
 import React from "react";
+import ContactItem from "../../../components/shared/ContactItem";
 import ContactForm from "../../../components/forms/ContactForm";
 import "./contactsSectionHome.css";
 
@@ -14,24 +15,21 @@ const ContactsSectionHome = () => {
         <div className="contacts__content">
           <div className="contacts__details">
             <h3 className="contacts__subtitle">Contact Us</h3>
-            <div className="contacts__item">
-              <div className="contacts__icon">
-                <img src={PhoneImage} alt="Phone icon" />
-              </div>
-              <div className="contacts__text">+1 (654) 896-4712</div>
-            </div>
-            <div className="contacts__item">
-              <div className="contacts__icon">
-                <img src={MailImage} alt="Email icon" />
-              </div>
-              <div className="contacts__text">hello@riverpulseclub.com</div>
-            </div>
-            <div className="contacts__item">
-              <div className="contacts__icon">
-                <img src={LocationImage} alt="Location icon" />
-              </div>
-              <div className="contacts__text">Vancouver, BC, Canada</div>
-            </div>
+            <ContactItem
+              image={PhoneImage}
+              alt={"Phone icon"}
+              text={"+1 (654) 896-4712"}
+            />
+            <ContactItem
+              image={MailImage}
+              alt={"Email icon"}
+              text={"hello@riverpulseclub.com"}
+            />
+            <ContactItem
+              image={LocationImage}
+              alt={"Location icon"}
+              text={"Vancouver, BC, Canada"}
+            />
           </div>
         </div>
         <ContactForm />
