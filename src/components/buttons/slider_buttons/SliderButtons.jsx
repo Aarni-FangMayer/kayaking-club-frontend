@@ -26,14 +26,14 @@ const SliderButtons = ({ btnType, nextSlide, prevSlide }) => {
 
   return (
     <div className="slider-buttons-horizontal">
-      <button className="slider-buttons__btn slider-buttons__btn--prev"  onClick={nextSlide}>
+      <button className="slider-buttons__btn slider-buttons__btn--prev"  onClick={prevSlide}>
         <img
           src={ArrowIcon}
           alt="Previous slide"
           className="slider-buttons__icon"
         />
       </button>
-      <button className="slider-buttons__btn slider-buttons__btn--next" onClick={prevSlide}>
+      <button className="slider-buttons__btn slider-buttons__btn--next" onClick={nextSlide}>
         <img
           src={ArrowIcon}
           alt="Next slide"
