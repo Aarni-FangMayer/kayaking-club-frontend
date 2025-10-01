@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowBlueButton from "../../../components/buttons/arrow_blue/ArrowBlueButton";
+import ContactForm from "../../../components/forms/ContactForm";
 import "./contactsSectionHome.css";
 
 import PhoneImage from "../../../assets/icons/phone.png";
@@ -34,27 +34,7 @@ const ContactsSectionHome = () => {
             </div>
           </div>
         </div>
-        <div className="contacts__form">
-          <h3 className="contacts__form-title">Any questions?</h3>
-          <form action="" className="contacts__form">
-            <input
-              type="text"
-              placeholder="name"
-              className="contacts__form-field"
-            />
-            <input
-              type="email"
-              placeholder="email"
-              className="contacts__form-field"
-            />
-            <input
-              type="text"
-              placeholder="message"
-              className="contacts__form-field"
-            />
-            <ArrowBlueButton text={"Send"} />
-          </form>
-        </div>
+        <ContactForm />
       </div>
       <div className="contacts__map">
         <iframe
