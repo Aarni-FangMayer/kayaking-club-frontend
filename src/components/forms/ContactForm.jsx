@@ -2,10 +2,10 @@ import React from "react";
 import ArrowBlueButton from "../buttons/arrow_blue/ArrowBlueButton";
 import "./contactForm.css";
 
-const ContactForm = () => {
+const ContactForm = ({ title, className  }) => {
   return (
-      <div className="contacts__form">
-        <h3 className="contacts__form-title">Any questions?</h3>
+      <div className={`contacts__form ${className || ""}`}>
+        <h3 className="contacts__form-title">{title}</h3>
         <form action="" className="contacts__form">
           <input
             type="text"
