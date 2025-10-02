@@ -32,7 +32,7 @@ const ContactsSectionHome = () => {
             />
           </div>
         </div>
-        <ContactForm />
+        <ContactForm title={"Any questions?"} />
       </div>
       <div className="contacts__map">
         <iframe

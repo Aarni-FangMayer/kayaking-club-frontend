@@ -1,5 +1,5 @@
 import React from "react";
-import TextBlock from "../../../components/shared/TextBlock";
+import TextWithImgSection from "../../../components/shared/TextWithImgSection";
 import DecorationIcon from "../../../components/ui/decorationIcon/DecorationIcon";
 import "./aboutSectionHome.css";
 import DogImage from "/manwithdog_img.jpg";
@@ -12,20 +12,16 @@ const AboutSectionHome = () => {
   return (
     <section id="about" className="about">
       <div className="about__content">
-        <div className="about__body">
-          <TextBlock
-            title={"About Us"}
-            subtitle={"Our Philosophy"}
-            description={
-              "We believe that adventure should be accessible to everyone. That’s why we focus on comfort, safety, and expert guidance, allowing you to fully immerse yourself in the moment."
-            }
-            btnText={"Learn more"}
-          />
-          <div className="about__image">
-            <img src={DogImage} alt="Man with dog on kayak photo" />
-          </div>
-        </div>
-
+        <TextWithImgSection
+          title={"About Us"}
+          subtitle={"Our Philosophy"}
+          description={
+            "We believe that adventure should be accessible to everyone. That’s why we focus on comfort, safety, and expert guidance, allowing you to fully immerse yourself in the moment."
+          }
+          btnText={"Learn more"}
+          img={DogImage}
+          alt={"Man with dog on kayak photo"}
+        />
         <div className="about__decor">
           <DecorationIcon
             icon={Icon1}
