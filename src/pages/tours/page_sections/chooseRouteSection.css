@@ -55,7 +55,7 @@
 
 @media (max-width: 1024px) {
     .choose-route-section {
-        margin: 120px  0;
+        margin: 120px  0 0 0;
         height: auto;
     }
 }

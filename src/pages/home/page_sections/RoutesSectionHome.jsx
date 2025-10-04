@@ -49,7 +49,7 @@ const RoutesSectionHome = () => {
   ];
   return (
     <section id="routes" className="routes" >
-      <SliderBigMobile cards={initialCards} />
+      <SliderBigMobile cards={initialCards} blockTitle={"Popular Routes"} />
       <SliderBig initialCards={initialCards} title={"Popular Routes"} />
     </section>
   )

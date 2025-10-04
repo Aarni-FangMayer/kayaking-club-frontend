@@ -9,6 +9,9 @@
 }
 
 @media (max-width: 1024px) {
+    .custom-routes{
+        margin-top: 120px;
+    }
     .custom-routes__contacts {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
