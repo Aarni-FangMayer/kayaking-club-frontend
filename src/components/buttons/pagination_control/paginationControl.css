@@ -1,0 +1,12 @@
+.pagination_button {
+    background-color: transparent;
+    border: none;
+}
+
+.pagination_buttons--text {
+    padding: 0 10px;
+    color: var(--green);
+    font-family: 'Sree Krushnadevaraya', serif;
+    font-weight: 400;
+    font-size: 14px;
+}
