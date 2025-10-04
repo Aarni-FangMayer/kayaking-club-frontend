@@ -1,5 +1,6 @@
 import React from "react";
 import SliderBig from "../../../components/sliders/slider_big/SliderBig";
+import SliderBigMobile from "../../../components/sliders/slider_bid_mobile/SliderBigMobile"
 
 import "./singleDayRouteSection.css";
 import NatureImage1 from "../../../assets/images/nature_img1.jpg";
@@ -49,6 +50,7 @@ const SingleDayRouteSection = () => {
   return (
     <section>
       <SliderBig initialCards={initialCards} title={"Single-Day Trips"} />
+      <SliderBigMobile cards={initialCards} blockTitle={"Single-Day Trips"} />
     </section>
   );
 };

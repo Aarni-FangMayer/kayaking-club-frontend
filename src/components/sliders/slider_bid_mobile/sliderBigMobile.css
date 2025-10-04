@@ -12,7 +12,6 @@
     .slider-big-mobile {
         display: grid;
         grid-template-columns: repeat(18, 1fr);
-        margin-bottom: 120px;
     }
     .card-mobile__list {
         grid-column: 2/18;

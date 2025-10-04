@@ -5,7 +5,7 @@ import CardMobileList from "../../cards/card_mobile/CardMobileList";
 
 import "./sliderBigMobile.css";
 
-const SliderBigMobile = ({ cards }) => {
+const SliderBigMobile = ({ cards, blockTitle }) => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(1);
 
@@ -21,6 +21,7 @@ const SliderBigMobile = ({ cards }) => {
               description={card.description}
               price={card.price}
               image={card.image}
+              blockTitle={blockTitle}
             />
           );
         })}
