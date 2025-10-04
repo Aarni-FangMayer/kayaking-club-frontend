@@ -2,7 +2,7 @@ import React from "react";
 import ArrowBlueButton from "../../buttons/arrow_blue/ArrowBlueButton";
 import "./cardMobileActive.css";
 
-const CardMobileActive = ({ title, description, price, image }) => {
+const CardMobileActive = ({ blockTitle, title, description, price, image }) => {
   return (
       <div className="card-mobile__active">
         <div className="card-mobile__active-image">
@@ -11,7 +11,7 @@ const CardMobileActive = ({ title, description, price, image }) => {
         <div className="card-mobile__active-info">
           <div className="textwrapper">
             <h2 className="card-mobile__active-title card-mobile__active-title--big">
-              Popular Routes
+              {blockTitle}
             </h2>
             <h3 className="card-mobile__active-subtitle">{title}</h3>
             <p className="card-mobile__active-description">{description}</p>
