@@ -1,38 +1,28 @@
 import React from "react";
-import ArrowBlueButton from "../../../components/buttons/arrow_blue/ArrowBlueButton";
+import ArticleCard from "../../../components/cards/article_card/ArticleCard";
+import ImageBlock from "../../../components/shared/ImageBlock";
+import CardList from "../../../components/lists/CardList"
 import "./allArticlesSectionBlog.css";
-import PaginationControl from '../../../components/buttons/pagination_control/PaginationControl'
+import Image7 from "../../../assets/images/blog_page_img7.jpg";
+import Image8 from "../../../assets/images/blog_page_img8.jpg";
 
 const AllArticlesSectionBlog = () => {
   return (
     <section className="all-articles">
-      <div className="all-articles__item all-articles__item--image-left">
-        <div className="image-left"></div>
+      <div class="all-blogs-grid__item--row1-col1">
+        <ImageBlock image={Image7} alt={"Kayaking instructor"} />
       </div>
-      <div className="all-articles__item all-articles__item--text-top">
-        <div className="all-articles__content">
-          <h3 className="all-articles__title">Meet Our New Instructors</h3>
-          <p className="all-articles__description">
-            We’re excited to welcome new faces to the River Pulse team. With
-            international kayaking experience, wilderness first aid training,
-            and a deep love for the wild, our new instructors bring both skill
-            and soul.
-          </p>
-        </div>
-        <ArrowBlueButton text={"Read article"} />
+      <div class="all-blogs-grid__item--row1-col2">
+        <ArticleCard
+          subtitle={"Meet Our New Instructors"}
+          description={
+            "We’re excited to welcome new faces to the River Pulse team. With international kayaking experience, wilderness first aid training, and a deep love for the wild, our new instructors bring both skill and soul."
+          }
+          btnText={"Read article"}
+        />
       </div>
-      <div className="all-articles__item all-articles__item--text-bottom">
-        <div className="all-articles__content">
-          <h3 className="all-articles__title">New Routes Coming </h3>
-          <p className="all-articles__description">
-            We’re expanding our adventure map! This fall, River Pulse Club will
-            introduce three new multi-day routes across British Columbia and
-            Alberta. From alpine lakes to remote forest rivers, each trip is
-            crafted to deliver a deeper connection with nature — with our
-            signature gear, guides, and comfort included.
-          </p>
-        </div>
-        <ArrowBlueButton text={"Read article"} />
+      <div class="all-blogs-grid__item--col3">
+        <CardList arr={articles} subtitle={"article"} header={"All Articles And News"} />
       </div>
       <div className="all-articles__item all-articles__item--image-right">
         <div className="image-right"></div>
