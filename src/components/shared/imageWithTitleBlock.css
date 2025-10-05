@@ -1,0 +1,14 @@
+.imageWithTitle--image {
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imageWithTitle--title {
+    max-width: 90%;
+    line-height: 1.25;
+}
