@@ -8,4 +8,32 @@
 
 .account__highlight {
     color: var(--green);
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.add-routes-btn {
+    padding: 5px 15px;
+    border-radius: 3px;
+    color: var(--green);
+    background-color: var(--text-light);
+    border: solid 1px var(--text-light);
+    margin-right: 15px;
+}
+
+.add-post-btn {
+    padding: 5px 15px;
+    border-radius: 3px;
+    color: var(--text-light);
+    background-color: var(--green);
+    border: solid 1px var(--green);
+}
+
+.admin-btn {
+    transition: color 0.5s ease;
+}
+
+.admin-btn:hover {
+    background-color: transparent;
+    border: solid 1px var(--text-light);
 }

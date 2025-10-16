@@ -19,10 +19,10 @@ const TextBlockWithHighlights = ({
       </div>
       <div className="account__buttons">
         {addRouteBtnText && (
-          <button className="add-routes-btn">{addRouteBtnText}</button>
+          <button className="admin-btn add-routes-btn">{addRouteBtnText}</button>
         )}
         {addPostBtnText && (
-          <button className="add-post-btn">{addPostBtnText}</button>
+          <button className="admin-btn add-post-btn">{addPostBtnText}</button>
         )}
       </div>
     </div>
