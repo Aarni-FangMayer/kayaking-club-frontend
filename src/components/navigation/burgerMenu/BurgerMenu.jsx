@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import './burgerMenu.css'
 
 const BurgerMenu = ({ menuOpen, setMenuOpen, language, setLanguage }) => {
+  const [logined, setLogined] = useState(false);
   return (
     <div className={`burgerMenu ${menuOpen ? "burgerMenu--open" : ""}`}>
       <button className="burgerMenu__close" onClick={() => setMenuOpen(false)}>
@@ -27,6 +28,9 @@ const BurgerMenu = ({ menuOpen, setMenuOpen, language, setLanguage }) => {
             <option value="en">English</option>
             <option value="fr">Français</option>
           </select>
+        </li>
+        <li>
+          {logined ? <button onClick={()=> {setLogined(!logined)}} className="loginBtn">Logout</button> : <button onClick={()=> {setLogined(!logined)}} className="loginBtn">Login or register</button> }
         </li>
       </ul>
     </div>

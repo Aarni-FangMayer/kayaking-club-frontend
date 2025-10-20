@@ -67,6 +67,15 @@
     cursor: pointer;
 }
 
+.loginBtn {
+    width: 100%;
+    border-radius: 6px;
+    background-color: var(--green);
+    border: none;
+    display: flex;
+    padding: 6px 10px;
+}
+
 .burgerMenu__list a:hover,
 .burgerMenu__lang:hover {
     color: var(--grey-blue);
