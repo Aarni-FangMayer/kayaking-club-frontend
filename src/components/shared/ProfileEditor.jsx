@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import ProfileAvatar from "./ProfileAvatar";
 import ProfileForm from "../forms/ProfileForm";
 import "./profileEditor.css";
+import editImage from "../../assets/icons/edit_image.png"
 
 const ProfileEditor = ( { avatarImg } ) => {
+  const [accordion, setAccordion] = useState(false);
   return (
     <div className="account__edit">
-      <h3 className="account__edit-title">Edit profile</h3>
-      <div className="account__edit-content">
-        <ProfileAvatar avatarImg={avatarImg} btnText={"change avatar"} />
-        <ProfileForm placeholderName={"Name Name"} placeholderEmail={"email@gmail.com"} placeholderPhone={"40 856 6545"} btnText={"Save"} />
-      </div>
+      <button className="account__edit-title" onClick={()=> setAccordion(!accordion)}><h3>Edit profile</h3><img src={editImage} alt="edit icon pencil" /></button>
+      {accordion &&
+        <div className="account__edit-content">
+          <ProfileAvatar avatarImg={avatarImg} btnText={"change avatar"} />
+          <ProfileForm placeholderName={"Name Name"} placeholderEmail={"email@gmail.com"} placeholderPhone={"40 856 6545"} btnText={"Save"} />
+        </div>
+      }
+
     </div>
   );
 };

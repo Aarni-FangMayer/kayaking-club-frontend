@@ -2,17 +2,23 @@
     width: 100%;
     height: auto;
     border: solid 1px var(--text-light);
-    padding: 35px;
     border-radius: 3px;
     background-color: rgba(87, 134, 154, 0.05);
 }
 
 .account__edit-title {
-    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    padding: 0 20px;
 }
 
 .account__edit-content {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     column-gap: 20px;
+    padding-bottom: 10px;
 }
