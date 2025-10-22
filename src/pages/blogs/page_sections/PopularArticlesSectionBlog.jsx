@@ -15,6 +15,8 @@ const PopularArticlesSectionBlog = () => {
       description: "Your first kayaking trip can feel daunting, but with a little prep it quickly becomes a fun, rewarding adventure.",
       textContent: "The four thieves arrived on the south side of the Louvre on Sunday morning at 9:30 and pulled a truck up on the sidewalk, right next to the museum walls. They posed as workers, wearing yellow vests and setting out traffic cones. To anyone strolling along the banks of the Seine, just across the road, it might not have been immediately apparent that the setup was a ruse and that a daring robbery was underway. Workers are a common sight around the Louvre, an ancient, sprawling former palace, whose basic upkeep and renovations make it a constantly transforming construction site. <br><br> The four thieves arrived on the south side of the Louvre on Sunday morning at 9:30 and pulled a truck up on the sidewalk, right next to the museum walls. They posed as workers, wearing yellow vests and setting out traffic cones. To anyone strolling along the banks of the Seine, just across the road, it might not have been immediately apparent that the setup was a ruse and that a daring robbery was underway. Workers are a common sight around the Louvre, an ancient, sprawling former palace, whose basic upkeep and renovations make it a constantly transforming construction site.",
       image: Image4,
+      likesAmount: 1,
+      commentsAmount: 3,
     },
     {
       id: 2,
@@ -22,6 +24,8 @@ const PopularArticlesSectionBlog = () => {
       description: "Multi-day kayaking offers unforgettable moments — from misty mornings on the water to nights by the fire under the stars. Our three-day route in British Columbia captures that magic and more.",
       textContent: "The four thieves arrived on the south side of the Louvre on Sunday morning at 9:30 and pulled a truck up on the sidewalk, right next to the museum walls. They posed as workers, wearing yellow vests and setting out traffic cones. To anyone strolling along the banks of the Seine, just across the road, it might not have been immediately apparent that the setup was a ruse and that a daring robbery was underway. Workers are a common sight around the Louvre, an ancient, sprawling former palace, whose basic upkeep and renovations make it a constantly transforming construction site.",
       image: Image5,
+      likesAmount: 0,
+      commentsAmount: 3,
     },
     {
       id: 3,
@@ -29,6 +33,8 @@ const PopularArticlesSectionBlog = () => {
       description: "Choosing the right kayak can be tricky — this guide explains the main types and helps match one to your paddling goals.",
       textContent: "The four thieves arrived on the south side of the Louvre on Sunday morning at 9:30 and pulled a truck up on the sidewalk, right next to the museum walls. They posed as workers, wearing yellow vests and setting out traffic cones. To anyone strolling along the banks of the Seine, just across the road, it might not have been immediately apparent that the setup was a ruse and that a daring robbery was underway. Workers are a common sight around the Louvre, an ancient, sprawling former palace, whose basic upkeep and renovations make it a constantly transforming construction site.",
       image: Image6,
+      likesAmount: 0,
+      commentsAmount: 3,
     },
   ];
   
@@ -42,7 +48,7 @@ const PopularArticlesSectionBlog = () => {
           btnText={"Read article"}
           image={popularArticleCardContent[0].image}
           textContent={popularArticleCardContent[0].textContent}
-          
+          article={popularArticleCardContent[0]}
         />
       </div>
       <h2 className="grid__item--mobile-title">Popular Articles</h2>
@@ -56,6 +62,7 @@ const PopularArticlesSectionBlog = () => {
           btnText={"Read article"}
           image={popularArticleCardContent[1].image}
           textContent={popularArticleCardContent[1].textContent}
+          article={popularArticleCardContent[1]}
         />
       </div>
       <div class="grid__item--row2-col1">
@@ -68,6 +75,7 @@ const PopularArticlesSectionBlog = () => {
           btnText={"Read article"}
           image={popularArticleCardContent[2].image}
           textContent={popularArticleCardContent[2].textContent}
+          article={popularArticleCardContent[2]}
         />
       </div>
       <div class="grid__item--row2-col3">
