@@ -1,5 +1,6 @@
 .home-main {
     height: 100%;
+    position: relative;
 }
 .home-content {  
     width: 100%;
