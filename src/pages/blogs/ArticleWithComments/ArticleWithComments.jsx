@@ -1,8 +1,11 @@
 import React from "react";
+import Comment from "./Comment";
+import Article from "./Article";
+import CommentForm from "../../../components/forms/CommentForm";
 import "./articleWithComments.css";
 import AvatarImage from "../../../assets/images/avatar.png";
 
-const ArticleWithComments = ({ title, text, image }) => {
+const ArticleWithComments = ({ title, text, image, article }) => {
   const comments = [
     {
       id: 1,
@@ -56,66 +59,17 @@ const ArticleWithComments = ({ title, text, image }) => {
 
   return (
     <div className="modal-blog__content">
-      <div className="article-content">
-        <h2 className="article-content__title">{title}</h2>
-        <div
-          className="article-text"
-          dangerouslySetInnerHTML={{ __html: text }}
-        />
-        <img className="article-text-img" src={image} />
-        <div className="article-actions">
-          <button className="like-btn">❤️ 0</button>
-          <button className="comments-btn">💬 0</button>
-          <button className="share-btn" onClick={handleShare}>
-            🔗 Share
-          </button>
-        </div>
-        <p className="article-date">date of publication 20-10-2025</p>
-        <p className="article-date">author Admin F.</p>
-      </div>
+      <Article title={title} text={text} image={image} handleShare={handleShare} dateOfPublication={""} article={article} />
       <div className="comment-block">
         <h3 className="comment-base__title">Comments to the post</h3>
         <div className="comment-base">
           {comments.map((comment) => {
             return (
-              <div key={comment.id} className="single-comment">
-                <div className="base-info">
-                  <img
-                    className="comment-avatar"
-                    src={comment.userAvatar}
-                    alt=""
-                  />
-                  <div className="user-info">
-                    <h4 className="user-info-name-comment">
-                      {comment.userName}
-                    </h4>
-                    <div className="subtitle">{comment.dateOfPublication}</div>
-                  </div>
-                </div>
-                <div className="comment-user-text">
-                  <p>{comment.text}</p>
-                </div>
-                <button className="comment-like-btn">
-                  ❤️ {comment.likesAmount}{" "}
-                </button>
-              </div>
+              <Comment comment={comment} />
             );
           })}
         </div>
-        <div className="write-comment">
-          <h3 className="write-comment__title">Write your comment</h3>
-          <form className="comment-text">
-            <textarea
-              className="comment-text__textarea"
-              name=""
-              id=""
-              placeholder="type your comment here..."
-            ></textarea>
-            <button className="comment-text__button" type="submit">
-              Send
-            </button>
-          </form>
-        </div>
+        <CommentForm />
       </div>
     </div>
   );
