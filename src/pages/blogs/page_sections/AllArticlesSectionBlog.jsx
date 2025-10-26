@@ -26,6 +26,14 @@ const AllArticlesSectionBlog = () => {
   ]
   return (
     <section className="all-articles">
+<BlogsModal isModalOpen={blogModalOpen} closeModal={closeBlogModal}>
+        <ArticleWithComments
+          title={currentArticle.title}
+          text={currentArticle.textContent}
+          image={currentArticle.image}
+          article={currentArticle}
+        />
+      </BlogsModal>
       <div class="all-blogs-grid__item--row1-col1">
         <ImageBlock image={Image7} alt={"Kayaking instructor"} />
       </div>
