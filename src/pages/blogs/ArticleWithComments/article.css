@@ -6,6 +6,7 @@
     max-height: 100%;
     overflow-y: auto;
     scroll-behavior: smooth;
+    padding: 25px 0;
 }
 
 .article__title {
@@ -30,7 +31,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    
+    margin-bottom: 10px;
 }
 
 .article__share-btn {
@@ -41,4 +42,28 @@
 
 .article__date {
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1024px) {
+    .article {
+        height: 100%;
+        grid-column: 1/19;
+        grid-row: 1/2;
+        overflow: unset;
+        padding: 0 60px 60px 60px;
+    }
+}
+
+@media (max-width: 840px) {
+   
+}
+
+@media (max-width: 580px) {
+    
+}
+
+@media (max-width: 430px) {
 }

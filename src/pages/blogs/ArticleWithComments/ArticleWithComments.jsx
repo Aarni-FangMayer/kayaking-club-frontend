@@ -58,20 +58,27 @@ const ArticleWithComments = ({ title, text, image, article }) => {
   };
 
   return (
-    <div className="modal-blog__content">
-      <Article title={title} text={text} image={image} handleShare={handleShare} dateOfPublication={""} article={article} />
-      <div className="comment-block">
-        <h3 className="comment-base__title">Comments to the post</h3>
-        <div className="comment-base">
-          {comments.map((comment) => {
-            return (
-              <Comment comment={comment} />
-            );
-          })}
+    <>
+      <div className="modal-blog__content">
+        <Article
+          title={title}
+          text={text}
+          image={image}
+          handleShare={handleShare}
+          dateOfPublication={""}
+          article={article}
+        />
+        <div className="comment-block">
+          <h3 className="comment-base__title">Comments to the post</h3>
+          <div className="comment-base">
+            {comments.map((comment) => {
+              return <Comment comment={comment} />;
+            })}
+          </div>
+          <CommentForm />
         </div>
-        <CommentForm />
       </div>
-    </div>
+    </>
   );
 };
 
