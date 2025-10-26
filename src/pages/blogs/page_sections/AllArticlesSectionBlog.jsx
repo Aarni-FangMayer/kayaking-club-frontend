@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import ArticleCard from "../../../components/cards/article_card/ArticleCard";
 import ImageBlock from "../../../components/shared/ImageBlock";
-import CardList from "../../../components/lists/CardList"
+import CardList from "../../../components/lists/CardList";
+import BlogsModal from "../../../components/modals/blogsModal/BlogsModal";
+import ArticleWithComments from "../ArticleWithComments/ArticleWithComments";
 import "./allArticlesSectionBlog.css";
 import Image7 from "../../../assets/images/blog_page_img7.jpg";
 import Image8 from "../../../assets/images/blog_page_img8.jpg";
@@ -62,7 +64,7 @@ const AllArticlesSectionBlog = () => {
 
   return (
     <section className="all-articles">
-<BlogsModal isModalOpen={blogModalOpen} closeModal={closeBlogModal}>
+      <BlogsModal isModalOpen={blogModalOpen} closeModal={closeBlogModal}>
         <ArticleWithComments
           title={currentArticle.title}
           text={currentArticle.textContent}
@@ -80,6 +82,9 @@ const AllArticlesSectionBlog = () => {
             "We’re excited to welcome new faces to the River Pulse team. With international kayaking experience, wilderness first aid training, and a deep love for the wild, our new instructors bring both skill and soul."
           }
           btnText={"Read article"}
+          image={AllArticleCardContent[0].image}
+          textContent={AllArticleCardContent[0].textContent}
+          article={AllArticleCardContent[0]}
         />
       </div>
       <div class="all-blogs-grid__item--col3">
@@ -97,6 +102,9 @@ const AllArticlesSectionBlog = () => {
             "We’re expanding our adventure map! This fall, explore three new routes across BC and Alberta — designed for a closer connection with nature and our signature comfort."
           }
           btnText={"Read article"}
+          image={AllArticleCardContent[1].image}
+          textContent={AllArticleCardContent[1].textContent}
+          article={AllArticleCardContent[1]}
         />
       </div>
       <div class="all-blogs-grid__item--row2-col2">

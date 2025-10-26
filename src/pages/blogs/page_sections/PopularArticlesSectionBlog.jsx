@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import ImageWithTitleBlock from "../../../components/shared/ImageWithTitleBlock";
 import ImageBlock from "../../../components/shared/ImageBlock";
 import ArticleCard from "../../../components/cards/article_card/ArticleCard";
@@ -37,10 +37,10 @@ const PopularArticlesSectionBlog = () => {
       commentsAmount: 3,
     },
   ];
+
   
   return (
     <section className="popular-blogs">
-      
       <div class="grid__item--row1-col1">
         <ArticleCard
           subtitle={popularArticleCardContent[0].subtitle}
