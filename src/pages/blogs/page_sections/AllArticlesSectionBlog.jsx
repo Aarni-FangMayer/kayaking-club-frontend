@@ -23,7 +23,22 @@ const AllArticlesSectionBlog = () => {
       title: "Meet Our New Instructors 3",
       data: "August 27, 2025",
     },
-  ]
+  ];
+
+  const [blogModalOpen, setBlogModalOpen] = useState(false);
+  const [currentArticle, setCurrentArticle] = useState({})
+
+
+  const closeBlogModal = () => {
+    setBlogModalOpen(false);
+  };
+
+  const openCurrentArticle = (currentArticle) => {
+    setCurrentArticle(currentArticle)
+    setBlogModalOpen(true)
+  }
+
+
   return (
     <section className="all-articles">
 <BlogsModal isModalOpen={blogModalOpen} closeModal={closeBlogModal}>
