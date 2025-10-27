@@ -11,17 +11,17 @@ const SelectedTour = ({ currentTour }) => {
         {currentTour.subtitle}
       </h3>
       <div className="selected-tour__images">
-        <img src={currentTour.images[0]} alt="" className="selected-tour__image" />
-        <img src={currentTour.images[1]} alt="" className="selected-tour__image" />
-        <img src={currentTour.images[2]} alt="" className="selected-tour__image" />
-        <img src={currentTour.images[3]} alt="" className="selected-tour__image" />
+        <img src={currentTour.images[0]} alt="" className="selected-tour__image first-image" />
+        <img src={currentTour.images[1]} alt="" className="selected-tour__image second-image" />
+        <img src={currentTour.images[2]} alt="" className="selected-tour__image third-image" />
+        <img src={currentTour.images[3]} alt="" className="selected-tour__image fourth-image" />
       </div>
       <div className="selected-tour__details">
-        <div className="subtitile selected-tour__detail">difficulty: {currentTour.difficulty}</div>
-        <div className="subtitile selected-tour__detail">date of trip: {currentTour.dateOfTrip}</div>
-        <div className="subtitile selected-tour__detail">included: {currentTour.included}</div>
-        <div className="subtitile selected-tour__detail">beginners friendly: {currentTour.level}</div>
-        <div className="subtitile selected-tour__detail">duration: {currentTour.duration}</div>
+        <div className="subtitle selected-tour__detail">difficulty: {currentTour.difficulty}</div>
+        <div className="subtitle selected-tour__detail">date of trip: {currentTour.dateOfTrip}</div>
+        <div className="subtitle selected-tour__detail">included: {currentTour.included}</div>
+        <div className="subtitle selected-tour__detail">beginners friendly: {currentTour.level}</div>
+        <div className="subtitle selected-tour__detail">duration: {currentTour.duration}</div>
         <div className="selected-tour__price">Price: {currentTour.price} €</div>
       </div>
       <div className="selected-tour__description">

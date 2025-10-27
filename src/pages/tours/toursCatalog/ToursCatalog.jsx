@@ -13,10 +13,7 @@ const ToursCatalog = () => {
   return (
     <div className="tours-catalog">
         <ToursFilterPanel selectedTour={selectedTour} handleChangeSelectedTour={handleChangeSelectedTour} />
-      <div className="tours-catalog__tours">
-        {/* <h2 className="tours-catalog__tours-heading">Select Route</h2> */}
         <ToursList selectedTour={selectedTour} handleChangeSelectedTour={handleChangeSelectedTour} />
-      </div>
     </div>
   );
 };
