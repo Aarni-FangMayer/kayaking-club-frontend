@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import SelectedTour from "./SelectedTour";
 import "./toursList.css";
 import ImageTour1 from "../../../assets/images/tourImage1.jpg";
-import ImageTour2 from "../../../assets/images/tourImage1.jpg";
+import ImageTour2 from "../../../assets/images/tourImage2.jpg";
 import ImageTour3 from "../../../assets/images/tourImage3.jpg";
 import ImageTour4 from "../../../assets/images/tourImage4.jpg";
+import ImageTour5 from "../../../assets/images/tourImage5.jpg";
+import ImageTour6 from "../../../assets/images/tourImage6.jpg";
+import ImageTour7 from "../../../assets/images/tourImage7.jpg";
+import ImageTour8 from "../../../assets/images/tourImage8.jpg";
 
 const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
   const allTours = [
@@ -15,7 +19,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour1,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -31,7 +35,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour2,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -46,7 +50,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour3,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -61,7 +65,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour4,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -76,7 +80,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour5,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -92,7 +96,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour6,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -107,7 +111,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour7,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -122,7 +126,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour8,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -137,7 +141,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour1,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -153,7 +157,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour2,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -168,7 +172,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour3,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
@@ -183,7 +187,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         "A classic route through one of Canada’s most iconic lakes — short, peaceful, and endlessly photogenic.",
       description:
         "Paddle across the iconic turquoise waters of Lake Louise, surrounded by soaring mountain peaks and glaciers. This short route is one of the most photographed in Canada — and for good reason. With calm waters and minimal effort, you'll glide through breathtaking scenery, perfect for beginners or anyone looking for a peaceful, picture-perfect day on the water.",
-      images: [ImageTour1, ImageTour2, ImageTour3, ImageTour4],
+      images: ImageTour4,
       difficulty: "easy",
       dateOfTrip: "28 august",
       included: "guide, photography",
