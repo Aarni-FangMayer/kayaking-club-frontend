@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import SelectedTour from "./SelectedTour";
+import ToursFilterPanel from "./ToursFilterPanel";
+import CatalogTourCard from "../../../components/cards/catalog_tour_card/CatalogTourCard";
 import "./toursList.css";
 import ImageTour1 from "../../../assets/images/tourImage1.jpg";
 import ImageTour2 from "../../../assets/images/tourImage2.jpg";
@@ -216,23 +218,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
           <div className="tours-catalog__tours">
             {allTours.map((tour) => {
               return (
-                <div
-                  className="tours-catalog__tour"
-                  onClick={() => openCurrentTour(tour)}
-                  key={tour.id}
-                >
-                  <img
-                    src={tour.images[0]}
-                    alt=""
-                    className="tours-catalog__tour-image"
-                  />
-                  <div className="tours-catalog__tour-subtitle">
-                    <p className="subtitle">Difficulty: {tour.difficulty}</p>
-                    <h4 className="tours-catalog__tour-title">{tour.tourName}</h4>
-                    <p className="subtitle">Price: {tour.price} €</p>
-                  </div>
-                  
-                </div>
+                <CatalogTourCard clickEvent={() => openCurrentTour(tour)} arr={tour} />
               );
             })}
           </div>
