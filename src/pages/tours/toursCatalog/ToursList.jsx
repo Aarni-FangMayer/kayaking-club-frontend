@@ -210,11 +210,12 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
     <div className="tours-catalog__tours-list">
       {selectedTour ? (
         <>
-          <SelectedTour currentTour={currentTour} />
+          <SelectedTour currentTour={currentTour} handleChangeSelectedTour={handleChangeSelectedTour} />
         </>
       ) : (
         <>
           <h2 className="tours-catalog__tours-heading">Select Route</h2>
+          <ToursFilterPanel selectedTour={selectedTour} handleChangeSelectedTour={handleChangeSelectedTour} />
           <div className="tours-catalog__tours">
             {allTours.map((tour) => {
               return (
