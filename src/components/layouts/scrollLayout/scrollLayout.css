@@ -1,0 +1,9 @@
+.home-scroll-container {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.home-scroll-container section {
+  height: calc(100vh - 225px);
+  width: 100%;
+}
