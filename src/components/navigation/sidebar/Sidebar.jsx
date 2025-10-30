@@ -15,7 +15,7 @@ const Sidebar = () => {
           <div
             onClick={() =>
               document
-                .getElementById("main")
+                .getElementById("sectionOne")
                 .scrollIntoView({ behavior: "smooth", block: "start" })
             }
             className="layout__sidebar-nav__number layout__sidebar-nav__number--active"
@@ -25,7 +25,7 @@ const Sidebar = () => {
           <div
             onClick={() =>
               document
-                .getElementById("about")
+                .getElementById("sectionTwo")
                 .scrollIntoView({ behavior: "smooth", block: "start" })
             }
             className="layout__sidebar-nav__number"
@@ -35,7 +35,7 @@ const Sidebar = () => {
           <div
             onClick={() =>
               document
-                .getElementById("routes")
+                .getElementById("sectionThree")
                 .scrollIntoView({ behavior: "smooth", block: "start" })
             }
             className="layout__sidebar-nav__number"
@@ -44,7 +44,7 @@ const Sidebar = () => {
           </div>
           <div
             onClick={() =>
-              document.getElementById("contacts").scrollIntoView({
+              document.getElementById("sectionFour").scrollIntoView({
                 behavior: "smooth",
                 block: "start",
               })

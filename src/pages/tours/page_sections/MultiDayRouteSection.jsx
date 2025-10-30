@@ -48,7 +48,7 @@ const MultiDayRouteSection = () => {
         },
       ];
   return (
-    <section>
+    <section id="sectionThree">
       <SliderBig initialCards={initialCards} title={"Multi-day expeditions"} />
       <SliderBigMobile cards={initialCards} blockTitle={"Multi-day expeditions"} />
     </section>

@@ -40,7 +40,7 @@ const PopularArticlesSectionBlog = () => {
 
   
   return (
-    <section className="popular-blogs">
+    <section id="sectionTwo" className="popular-blogs">
       <div class="grid__item--row1-col1">
         <ArticleCard
           subtitle={popularArticleCardContent[0].subtitle}

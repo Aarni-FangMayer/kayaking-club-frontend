@@ -8,7 +8,7 @@ import KayakerImage2 from "../../../assets/images/routes_page_img2.jpg";
 
 const CustomRouteSection = () => {
   return (
-    <section className="custom-routes">
+    <section id="sectionFour" className="custom-routes">
       <TextWithImgSection
         title={"Custom Routes"}
         subtitle={"Experiences for every occasion"}

@@ -6,7 +6,7 @@ import PromoImage from '../../../assets/images/promo_img.jpg'
 
 const PromoSectionBlog = () => {
   return (
-    <section className="promo_wrapper">
+    <section id="sectionFour" className="promo_wrapper">
       <TextWithImgSection
         title={"Get involved"}
         subtitle={"You can join our club"}

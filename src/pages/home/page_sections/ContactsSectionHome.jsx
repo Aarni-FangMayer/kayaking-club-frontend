@@ -9,7 +9,7 @@ import LocationImage from "../../../assets/icons/location.png";
 
 const ContactsSectionHome = () => {
   return (
-    <section id="contacts" className="contacts">
+    <section id="sectionFour" className="contacts">
       <div className="contacts__info">
         <h2 className="contacts__title">Contacts</h2>
         <div className="contacts__content">

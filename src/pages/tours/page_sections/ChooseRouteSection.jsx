@@ -13,7 +13,7 @@ const ChooseRouteSection = () => {
     setRoutesModalOpen(false);
   }
   return (
-    <section className="choose-route-section">
+    <section id="sectionOne" className="choose-route-section">
       <TextWithImgSection
         title={"Select Route"}
         subtitle={"How To Choose A Tour"}

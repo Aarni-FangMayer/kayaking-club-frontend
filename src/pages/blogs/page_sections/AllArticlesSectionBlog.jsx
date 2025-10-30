@@ -63,7 +63,7 @@ const AllArticlesSectionBlog = () => {
 
 
   return (
-    <section className="all-articles">
+    <section id="sectionThree" className="all-articles">
       <BlogsModal isModalOpen={blogModalOpen} closeModal={closeBlogModal}>
         <ArticleWithComments
           title={currentArticle.title}

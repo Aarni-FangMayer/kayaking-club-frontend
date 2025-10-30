@@ -10,7 +10,7 @@ import Icon4 from "../../../assets/icons/icon_4.png";
 
 const AboutSectionHome = () => {
   return (
-    <section id="about" className="about">
+    <section id="sectionTwo" className="about">
       <div className="about__content">
         <TextWithImgSection
           title={"About Us"}

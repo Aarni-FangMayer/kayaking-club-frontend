@@ -48,7 +48,7 @@ const SingleDayRouteSection = () => {
     },
   ];
   return (
-    <section>
+    <section id="sectionTwo">
       <SliderBig initialCards={initialCards} title={"Single-Day Trips"} />
       <SliderBigMobile cards={initialCards} blockTitle={"Single-Day Trips"} />
     </section>

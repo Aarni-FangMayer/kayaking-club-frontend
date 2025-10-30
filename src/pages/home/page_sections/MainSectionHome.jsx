@@ -27,7 +27,7 @@ const MainSectionHome = () => {
     setNewUserregistered(true);
   }
   return (
-    <section id="main" className="home-main">
+    <section id="sectionOne" className="home-main">
       <div className="home-content">
         <div className="home-content__image">
           <SliderSmall />
