@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import StaticLayout from "../../components/layouts/staticLayout/StaticLayout";
 import ScrollLayout from "../../components/layouts/scrollLayout/ScrollLayout";
+import MobileScrollLayout from "../../components/layouts/mobileScrollLayout/MobileScrollLayout";
+import useIsMobile from "../../hooks/useIsMobile";
 import InfoSectionBlog from "./page_sections/InfoSectionBlog";
 import PopularArticlesSectionBlog from "./page_sections/PopularArticlesSectionBlog";
 import AllArticlesSectionBlog from "./page_sections/AllArticlesSectionBlog";
@@ -9,16 +11,26 @@ import "./blogs.css";
 
 const Blogs = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const isMobile = useIsMobile(1024);
 
   return (
     <StaticLayout>
-      <ScrollLayout
-        sectionOne={<InfoSectionBlog />}
+      {isMobile ? (
+        <MobileScrollLayout
+          sectionOne={<InfoSectionBlog />}
+          sectionTwo={<PopularArticlesSectionBlog />}
+          sectionThree={<AllArticlesSectionBlog />}
+          sectionFour={<PromoSectionBlog />}
+        />
+      ) : (
+        <ScrollLayout
+          sectionOne={<InfoSectionBlog />}
         sectionTwo={<PopularArticlesSectionBlog setModalOpen={setModalOpen} />}
         sectionThree={<AllArticlesSectionBlog setModalOpen={setModalOpen} />}
         sectionFour={<PromoSectionBlog />}
         modalOpen={modalOpen}
-      />
+        />
+      )}
     </StaticLayout>
   );
 };

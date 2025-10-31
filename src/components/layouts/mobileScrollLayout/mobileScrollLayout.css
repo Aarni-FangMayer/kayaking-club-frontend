@@ -1,0 +1,10 @@
+.scroll-container-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+  .scroll-container-mobile {
+    display: block;
+    height: auto;
+  }
+}
