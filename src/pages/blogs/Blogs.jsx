@@ -25,10 +25,10 @@ const Blogs = () => {
       ) : (
         <ScrollLayout
           sectionOne={<InfoSectionBlog />}
-        sectionTwo={<PopularArticlesSectionBlog setModalOpen={setModalOpen} />}
-        sectionThree={<AllArticlesSectionBlog setModalOpen={setModalOpen} />}
-        sectionFour={<PromoSectionBlog />}
-        modalOpen={modalOpen}
+          sectionTwo={<PopularArticlesSectionBlog setModalOpen={setModalOpen} />}
+          sectionThree={<AllArticlesSectionBlog setModalOpen={setModalOpen} />}
+          sectionFour={<PromoSectionBlog />}
+          modalOpen={modalOpen}
         />
       )}
     </StaticLayout>

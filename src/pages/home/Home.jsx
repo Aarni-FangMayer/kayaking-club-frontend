@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import StaticLayout from "../../components/layouts/staticLayout/StaticLayout";
 import ScrollLayout from "../../components/layouts/scrollLayout/ScrollLayout";
 import MobileScrollLayout from "../../components/layouts/mobileScrollLayout/MobileScrollLayout";
@@ -10,6 +10,7 @@ import ContactsSectionHome from "./page_sections/ContactsSectionHome";
 import "./home.css";
 
 const Home = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const isMobile = useIsMobile(1024);
 
   return (
@@ -25,8 +26,9 @@ const Home = () => {
         <ScrollLayout
           sectionOne={<MainSectionHome />}
           sectionTwo={<AboutSectionHome />}
-          sectionThree={<RoutesSectionHome />}
+          sectionThree={<RoutesSectionHome setModalOpen={setModalOpen} />}
           sectionFour={<ContactsSectionHome />}
+          modalOpen={modalOpen}
         />
       )}
     </StaticLayout>

@@ -6,11 +6,12 @@ import ToursCatalog from "../toursCatalog/ToursCatalog";
 import "./chooseRouteSection.css";
 import KayakerImage1 from "../../../assets/images/routes_page_img1.jpg";
 
-const ChooseRouteSection = () => {
+const ChooseRouteSection = ({ setModalOpen }) => {
   const [routesModalOpen, setRoutesModalOpen] = useState(false);
 
   const closeRoutesModal = () => {
     setRoutesModalOpen(false);
+    setModalOpen(false);
   }
   return (
     <section id="sectionOne" className="choose-route-section">
@@ -23,7 +24,8 @@ const ChooseRouteSection = () => {
         btnText={"Learn more"}
         img={KayakerImage1}
         alt={"Man on kayak photo"}
-        onClickFunction={()=> setRoutesModalOpen(true)}
+        onClickFunction={()=> {setRoutesModalOpen(true); setModalOpen(true)}}
+        
       />
       <RoutesModal isModalOpen={routesModalOpen} closeModal={closeRoutesModal}>
           <ToursCatalog />

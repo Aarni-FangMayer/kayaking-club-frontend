@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import StaticLayout from '../../components/layouts/staticLayout/StaticLayout'
 import ScrollLayout from '../../components/layouts/scrollLayout/ScrollLayout'
 import MobileScrollLayout from '../../components/layouts/mobileScrollLayout/MobileScrollLayout'
@@ -9,8 +9,9 @@ import MultiDayRouteSection from './page_sections/MultiDayRouteSection'
 import CustomRouteSection from './page_sections/CustomRouteSection'
 
 const Tours = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const isMobile = useIsMobile(1024);
-  
+
   return (
     <StaticLayout>
       {isMobile ? (
@@ -22,10 +23,11 @@ const Tours = () => {
         />
       ) : (
         <ScrollLayout
-          sectionOne={<ChooseRouteSection />}
-          sectionTwo={<SingleDayRouteSection />}
-          sectionThree={<MultiDayRouteSection />}
+          sectionOne={<ChooseRouteSection setModalOpen={setModalOpen} />}
+          sectionTwo={<SingleDayRouteSection setModalOpen={setModalOpen} />}
+          sectionThree={<MultiDayRouteSection setModalOpen={setModalOpen} />}
           sectionFour={<CustomRouteSection />}
+          modalOpen={modalOpen}
         />
       )}
     </StaticLayout>
