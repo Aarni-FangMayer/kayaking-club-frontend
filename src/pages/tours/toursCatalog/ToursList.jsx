@@ -12,7 +12,7 @@ import ImageTour6 from "../../../assets/images/tourImage6.jpg";
 import ImageTour7 from "../../../assets/images/tourImage7.jpg";
 import ImageTour8 from "../../../assets/images/tourImage8.jpg";
 
-const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
+const ToursList = ({ selectedTour, handleChangeSelectedTour, singleDayTitle, multiDayTitle }) => {
   const allTours = [
     {
       id: 1,
@@ -214,7 +214,7 @@ const ToursList = ({ selectedTour, handleChangeSelectedTour }) => {
         </>
       ) : (
         <>
-          <h2 className="tours-catalog__tours-heading">Select Route</h2>
+          <h2 className="tours-catalog__tours-heading">Select Route {singleDayTitle}{multiDayTitle}</h2>
           <ToursFilterPanel selectedTour={selectedTour} handleChangeSelectedTour={handleChangeSelectedTour} />
           <div className="tours-catalog__tours">
             {allTours.map((tour) => {

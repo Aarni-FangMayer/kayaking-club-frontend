@@ -3,7 +3,7 @@ import ToursFilterPanel from "./ToursFilterPanel";
 import ToursList from "./ToursList";
 import "./toursCatalog.css";
 
-const ToursCatalog = () => {
+const ToursCatalog = ({ singleDayTitle, multiDayTitle }) => {
   const [selectedTour, setSelectedTour] = useState(false);
 
   const handleChangeSelectedTour = () => {
@@ -12,7 +12,7 @@ const ToursCatalog = () => {
 
   return (
     <div className="tours-catalog">
-        <ToursList selectedTour={selectedTour} handleChangeSelectedTour={handleChangeSelectedTour} />
+        <ToursList selectedTour={selectedTour} handleChangeSelectedTour={handleChangeSelectedTour} singleDayTitle={singleDayTitle} multiDayTitle={multiDayTitle} />
     </div>
   );
 };
