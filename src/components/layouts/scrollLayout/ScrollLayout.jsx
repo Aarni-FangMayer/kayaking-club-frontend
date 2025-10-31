@@ -43,6 +43,7 @@ const ScrollLayout = ({
 
   useEffect(() => {
   let isScrolling = false;
+  const isMobile = window.innerWidth <= 1024;
 
   if (modalOpen) {
     const scrollY = window.scrollY;
@@ -62,6 +63,7 @@ const ScrollLayout = ({
   }
 
   const handleWheel = (e) => {
+    if (modalOpen || isMobile) return;
     console.log('handleWheel modalOpen', modalOpen);
 
     if (modalOpen) return;
