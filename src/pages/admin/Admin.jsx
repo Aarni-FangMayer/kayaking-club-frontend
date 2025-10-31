@@ -1,13 +1,13 @@
-import React from 'react'
-import StaticLayoutSingle from '../../components/layouts/staticLayoutSingle/StaticLayoutSingle'
+import React from "react";
+import StaticLayoutSingle from "../../components/layouts/staticLayoutSingle/StaticLayoutSingle";
 import CardList from "../../components/lists/CardList";
 import TextBlockWithHighlights from "../../components/shared/TextBlockWithHighlights";
 import ProfileEditor from "../../components/shared/ProfileEditor";
 import "./admin.css";
-import AvatarImage from '../../assets/images/avatar.png'
+import AvatarImage from "../../assets/images/avatar.png";
 
 const Admin = () => {
-    const allRoutes = [
+  const allRoutes = [
     {
       id: 1,
       title: "Tour adventure #1",
@@ -32,7 +32,7 @@ const Admin = () => {
 
   return (
     <StaticLayoutSingle>
-            <div className="account">
+      <div className="account">
         <div className="account__user">
           <TextBlockWithHighlights
             title={"Hello, Name Name"}
@@ -55,8 +55,7 @@ const Admin = () => {
         </div>
       </div>
     </StaticLayoutSingle>
-  )
-}
+  );
+};
 
-export default Admin
-
+export default Admin;
