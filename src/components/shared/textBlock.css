@@ -1,14 +1,17 @@
+.about__title {
+    line-height: 0.7;
+}
 
 .about__text {
     grid-column: 1/7;
 }
 
 .about__subtitle {
-    margin: 25px 0;
+    margin: 40px 0 20px 0;
 }
 
 .about__description {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 1280px) {

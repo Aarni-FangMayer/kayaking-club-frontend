@@ -6,8 +6,7 @@
 
 .image__block {
     grid-column: 8/19;
-    padding-top: 27px;
-    height: 80%;
+    height: 100%;
 }
 
 .image__block img {

@@ -13,7 +13,7 @@
     grid-column: 1/10;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 110px auto;
+    grid-template-rows: 10vh auto;
     column-gap: 20px;
     color: var(--text-light);
 }
