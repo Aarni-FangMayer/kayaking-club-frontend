@@ -17,11 +17,11 @@ const SelectedTour = ({ currentTour, handleChangeSelectedTour }) => {
     <>
       <button className="selected-tour__back-button" onClick={handleChangeSelectedTour}><img src={ArrowBack} alt="" /> Show All Routes</button>
       <div className="selected-tour">
-        <h2 className="selected-tour__title">{currentTour.tourName}</h2>
+        <h2 className="selected-tour__title">{currentTour.name}</h2>
         <h3 className="selected-tour__subtitle">{currentTour.subtitle}</h3>
         <div className="selected-tour__image-block">
           <img
-            src={currentTour.images}
+            src={currentTour.image}
             alt="Tour image"
             className="selected-tour__image"
           />

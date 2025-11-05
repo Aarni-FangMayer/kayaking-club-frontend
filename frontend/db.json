@@ -11,7 +11,7 @@
             "forBeginners": "yes",
             "duration": "1 day",
             "price": "1050",
-            "image": "img1",
+            "image": "https://www.banffadventures.com/site/assets/files/7997/moraine_lake_summer.2000x1198.jpg",
             "accountId": []
         },
         {
@@ -25,7 +25,7 @@
             "forBeginners": "yes",
             "duration": "1 day",
             "price": "750",
-            "image": "img2",
+            "image": "https://prodigits.co.uk/thumbs/wallpapers/p2ls/nature/43/af880c3112554858.jpg",
             "accountId": []
         },
         {
@@ -39,7 +39,7 @@
             "forBeginners": "no",
             "duration": "1 day",
             "price": "970",
-            "image": "img3",
+            "image": "https://cdn.britannica.com/65/126065-050-B73FC50D/hotel-Ottawa-River-Fairmont-Chateau-Laurier-Parliament.jpg",
             "accountId": []
         },
         {
@@ -53,7 +53,7 @@
             "forBeginners": "yes",
             "duration": "1 day",
             "price": "1025",
-            "image": "img4",
+            "image": "https://paddlingmagazine-images.s3.amazonaws.com/2023/01/Algonquin-Park-Is-Ontarios-Best-Canoe-Camping-Wilderness.jpg",
             "accountId": []
         },
         {
@@ -67,7 +67,7 @@
             "forBeginners": "yes",
             "duration": "1 day",
             "price": "1200",
-            "image": "img5",
+            "image": "https://lh3.googleusercontent.com/proxy/3lD2XAivJFTIMbd25tRTjg2c2DWK-Q44WDuJV4gPZSSkwrGtKFotrpxT41JFemF5UvwIaxWZVXLsxaJ0VSTwQu5SZdYTdQ",
             "accountId": []
         },
         {
@@ -81,7 +81,7 @@
             "forBeginners": "no",
             "duration": "3 day",
             "price": "1265",
-            "image": "img6",
+            "image": "https://www.muchbetteradventures.com/magazine/content/images/2023/01/My_project__12_--1-.jpg",
             "accountId": []
         },
         {
@@ -95,7 +95,7 @@
             "forBeginners": "no",
             "duration": "3 day",
             "price": "970",
-            "image": "img7",
+            "image": "https://kootenaylakeview.com/wp-content/uploads/2012/03/Lakeviewfront_header1.jpg",
             "accountId": []
         },
         {
@@ -109,7 +109,7 @@
             "forBeginners": "yes",
             "duration": "3 day",
             "price": "1175",
-            "image": "img8",
+            "image": "https://landsby.ca/wp-content/uploads/2022/11/IMG_9938.jpg",
             "accountId": []
         },
         {
@@ -123,7 +123,7 @@
             "forBeginners": "no",
             "duration": "3 day",
             "price": "985",
-            "image": "img9",
+            "image": "https://s1.it.atcdn.net/wp-content/uploads/2023/12/HEROGros-Morne-1.jpg",
             "accountId": []
         },
         {
@@ -137,7 +137,7 @@
             "forBeginners": "yes",
             "duration": "3 day",
             "price": "1024",
-            "image": "img10",
+            "image": "https://cdn.authentik.com/canada/images/facebook/og-canada-default_52877.png",
             "accountId": []
         }
     ]
