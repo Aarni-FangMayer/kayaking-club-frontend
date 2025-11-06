@@ -1,11 +1,17 @@
 const express = require("express");
+const path = require("path");
+const cors = require("cors");
+
 const app = express();
+
+/* middleware to serve static frontend assets from the "dist" folder */
+const distPath = path.join(__dirname, "dist");
+app.use(express.static(distPath));
 
 /* middleware json parser */
 app.use(express.json())
 
 /* middleware cors*/
-const cors = require("cors");
 app.use(cors());
 
 let tours = [
@@ -207,11 +213,6 @@ const requestLogger = (request, response, next) => {
 }
 app.use(requestLogger)
 
-
-app.get("/", (request, response) => {
-  response.send("<h1>Hello World!</h1>");
-});
-
 /* Fetching all tours in list */
 app.get("/api/tours", (request, response) => {
   response.json(tours);
@@ -237,17 +238,21 @@ app.delete("/api/tours/:id", (request, response) => {
 })
 
 /* Adding a new tour */
-app.post("/api/tours", (request, response) => {
-  const maxId = tours.length > 0
-  ? Math.max(...tours.map(n => Number(n.id)))
-  : 0
+app.post("/api/tours", (req, res) => {
+  const newTour = req.body;
+  newTour.id = `tour-${Date.now().toString(36)}`;
+  tours.push(newTour);
+  console.log("New tour added:", newTour);
+  res.status(201).json(newTour);
+});
 
-  const newTour = request.body;
-  newTour.id = String(maxId + 1);
-  tours = tours.concat(newTour);
-  
-  response.json(newTour);
-})
+app.use((req, res, next) => {
+  if (req.path.startsWith('/api')) {
+    return res.status(404).json({ error: 'unknown endpoint' });
+  }
+
+  res.sendFile(path.resolve(distPath, 'index.html'));
+});
 
 /* middleware unknownEndpoint */
 const unknownEndpoint = (request, response) => {
@@ -255,6 +260,11 @@ const unknownEndpoint = (request, response) => {
 }
 
 app.use(unknownEndpoint)
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send({ error: "internal server error" });
+});
 
 const PORT = 3001;
 app.listen(PORT, () => {
