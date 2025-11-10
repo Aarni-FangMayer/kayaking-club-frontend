@@ -6,6 +6,7 @@ const middleware = require("./utils/middleware");
 const toursRouter = require("./controllers/tours");
 
 const app = express();
+const path = require("path");
 const distPath = path.join(__dirname, "dist");
 
 logger.info("connecting to", config.MONGODB_URI);
