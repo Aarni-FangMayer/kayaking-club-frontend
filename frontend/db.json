@@ -205,5 +205,25 @@
       "price": "540",
       "image": "test 5 json server"
     }
+  ],
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Test blog title",
+      "subtitle": "Test blog subtitle",
+      "text": "Test blog text",
+      "likes": "3",
+      "comments": "3",
+      "commentObject": [
+        {
+          "userId": "user id",
+          "commentText": "comment text test",
+          "likesAmount": "1"
+        }
+      ],
+      "data": "1 june",
+      "author": "author",
+      "image": "image test"
+    }
   ]
 }
