@@ -6,6 +6,7 @@ const middleware = require("./utils/middleware");
 const toursRouter = require("./controllers/tours");
 const usersRouter = require("./controllers/users");
 const blogsRouter = require("./controllers/blogs");
+const loginRouter = require('./controllers/login');
 
 const app = express();
 const path = require("path");
@@ -31,6 +32,7 @@ app.use(middleware.requestLogger);
 app.use("/api/tours", toursRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/blogs", blogsRouter);
+app.use('/api/login', loginRouter);
 
 app.use(middleware.frontendHandler(distPath));
 
